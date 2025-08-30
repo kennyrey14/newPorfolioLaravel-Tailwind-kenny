@@ -19,7 +19,7 @@
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 scroll-smooth">
+<body style="background: black;color:gray" class="bg-gray-50 text-gray-900 scroll-smooth">
 
     <!-- Navbar -->
     <header class="fixed w-full z-50 bg-white shadow-md">
@@ -39,27 +39,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center 
-    bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500
-    text-white relative animate-gradient">
+    <section id="home" style="background:black"
+        class="min-h-screen flex items-center justify-center bg-pink-500 text-white relative">
 
-        {{-- <style>
-            @keyframes bounce-slow {
-
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-
-                50% {
-                    transform: translateY(-30px);
-                }
-            }
-
-            .animate-bounce-slow {
-                animation: bounce-slow 6s infinite;
-            }
-        </style> --}}
 
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 animate-bounce-slow gap-10 items-center px-6">
             <!-- Left: Text -->
@@ -84,35 +66,36 @@
                 </div>
             </div>
 
-            <!<!-- Right: Image -->
-                <div class="relative group top-5">
-                    <div
-                        class="p-[3px] rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-                        <img src="images/profile.jpg" alt="Kenny Rey" class="w-[530px] h-[580px] object-cover rounded-2xl 
+            <!-- Right: Image -->
+            <div class="relative group top-5">
+                <div
+                    class="p-[3px] rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 shadow-2xl transition-transform duration-300 group-hover:scale-105">
+                    <img src="images/profile.jpg" alt="Kenny Rey" class="w-[530px] h-[580px] object-cover rounded-2xl 
                                [mask-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0))] 
                                [mask-repeat:no-repeat] [mask-size:cover]">
-                    </div>
-                    <div
-                        class="absolute -bottom-4 -right-4 bg-gradient-to-r from-red-500 to-pink-500 p-3 rounded-xl shadow-xl">
-                        <p class="font-semibold text-sm">💻 Laravel Developer</p>
-                    </div>
                 </div>
-
+                <div
+                    class="absolute -bottom-4 -right-4 bg-gradient-to-r from-red-500 to-pink-500 p-3 rounded-xl shadow-xl">
+                    <p class="font-semibold text-sm">💻 Laravel Developer</p>
+                </div>
+            </div>
         </div>
     </section>
 
 
     <!-- About Section -->
     <section id="about" class="max-w-7xl mx-auto py-20 px-5 md:px-0">
-        <h2 class="text-4xl font-bold text-center mb-12 
+        <div class="bg-gray-800 mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 
            bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
            bg-clip-text text-transparent">
-            About Me
-        </h2>
-
+                About Me
+            </h2>
+        </div>
         <div class="grid md:grid-cols-2 gap-10 items-center">
-            <img src="{{ asset('images/profile.jpg') }}" alt="Profile"
-                class="rounded-xl shadow-lg hover:scale-105 transition transform">
+            <img src="images/profile.jpg" alt="Kenny Rey" class="w-[530px] h-[580px] object-cover rounded-2xl 
+                               [mask-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0))] 
+                               [mask-repeat:no-repeat] [mask-size:cover]">
             <div>
                 <p class="mb-4 text-lg leading-relaxed">I'm Kenny Rey, a software developer specializing in PHP
                     (Laravel) and database-driven apps, with 1+ year of Java experience and 2 years in web design using
@@ -125,7 +108,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-gray-100 py-20">sss
+    <section id="projects" class="bg-gray-800 py-20">
         <h2 class="text-4xl font-bold text-center mb-12 
         bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
         bg-clip-text text-transparent">
@@ -202,7 +185,7 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="bg-gray-500 text-white py-20">
+    <section id="contact" class="bg-black text-white py-20">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
 
 
@@ -230,7 +213,7 @@
                 </form>
             </div>
             <!-- Display Messages -->
-            <div class="bg-gray-700 p-6 rounded-xl shadow-lg overflow-y-auto max-h-[500px] mt-16 ">
+            <div class="bg-black p-6 rounded-xl shadow-lg overflow-y-auto max-h-[500px] mt-16 ">
                 <h3 class="text-2xl font-semibold mb-4">Messages</h3>
                 <div class="space-y-4">
                     @forelse($messages as $msg)
