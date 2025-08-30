@@ -10,8 +10,15 @@ use Illuminate\Http\Request;
 use \App\Models\Contact;
 class ContactController extends Controller
 {
+    public function index()
+    {
+        $messages = Contact::latest()->get();
+        return view('myHomePage', compact('messages'));
+    }
+
     public function submit(Request $request)
     {
+
         // Validate form
         $validator = \Validator::make($request->all(), [
             'name' => 'required|string|max:255',
